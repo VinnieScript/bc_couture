@@ -1,0 +1,365 @@
+a:hover{
+         border-bottom-style:solid;
+         border-color:#fff;
+         cursor:pointer;
+         font-weight:bold;
+        }
+#serach{
+         background-image:url('images/logo.jpg');
+            background-position:right;
+        }
+    a:visited{
+          color:#fff;
+        }
+        #menu_icon{
+            display: none;
+        }
+.body{
+
+width:100%; 
+height:100%;
+color:#fff; 
+border: 0px solid #000;
+margin-top: 20px;
+}
+.category{
+color:#000;
+float: left;
+width: 20%;
+margin-left: 100px;
+}
+.product{
+float: left;
+color: #003300;
+width: 60%;
+margin-left: 10px;
+}
+.logoarea1{
+
+float:left;
+}
+.menubar{
+width:80%;
+height:50px; 
+background-color:#500000;
+margin-left:100px;
+border-radius:5px;
+
+}
+.logoArea{
+margin-top:20px;
+width:80%;
+height:50px;
+}
+.workinghours{
+width:80%
+}
+.bgbanner{
+width:100%;
+background-color:#e9e9e9; 
+border:0px solid #000;
+}
+.titlebar{
+width:100%;
+height:30px;
+background-color:#500000;
+}
+.maindiv{
+width:100%;
+ height:100%;
+border:0px solid #000;
+}
+.titlebar_left{
+margin-left:100px;
+float:left;
+color:#fff;
+font-family:candara;
+font-size:0.9em;
+font-weight:bold;
+line-height:30px;
+}
+
+.titlebar_right{
+margin-right:100px;
+float:right;
+color:#fff;
+font-family:candara;
+font-size:0.9em;
+line-height:30px;
+}
+
+.logoArea1{
+float:left;
+}
+.logoArea2{
+float: left;
+margin-left: 30px;
+}
+
+.logoArea2text{
+
+font-family:candara;
+border-radius:5px;
+width:500px; 
+height:30px;
+
+}
+.logoArea2_text{
+width:500px;
+height:30px;
+border-radius:5px;
+}
+
+.displayproduct{
+
+float:left;
+margin-left:10px;
+border:0px solid #000;
+cursor:pointer;
+
+}
+.imageframe{
+
+width:120px;
+height: 100px;
+}
+
+.starframe{
+
+width:100px
+
+}
+
+#username{
+width:25%;
+}
+#password{
+width:25%;
+}
+
+#loginbtn{
+width:25%;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.menubar{
+	display:none;
+}
+#menu_icon{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: block;
+}
+.category{
+display:none;}
+.product{
+	width:100%;
+}
+
+
+
+tr{
+width:100%;
+height:100%;
+}
+
+.titlebar{
+height:70px;
+text-align:center;
+
+}
+.titlebar_left{
+width:100%;
+margin-left:0px;
+
+}
+.titlebar_right{
+display: none;
+
+
+}
+.bgbanner{
+
+height:100%;
+
+}
+.logoArea1{
+width:100%;
+text-align:center;
+}
+
+.logoArea2{
+width:100%;
+text-align:center;
+}
+.logoArea3{
+width:100%;
+text-align:center;
+}
+
+.logoArea2_text{
+display:none;
+
+}
+.logoArea{
+height:100%;
+
+}
+
+     /* Style the navigation menu */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  width: 50%;
+
+
+
+  
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+}
+@media screen and (max-width: 600px) {
+.titlebar{
+height:70px;
+text-align:center;
+}
+#username{
+    width:50%;
+}
+
+#password{
+    width: 50%;
+}
+#loginbtn{
+    width: 50%;
+}
+
+
+#menu_icon{
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: block;
+}
+.displayproduct{
+
+width:100%;
+
+border:0px solid #000;
+text-align:center;
+cursor:pointer
+
+}
+
+.imageframe{
+
+width:50%;
+height: 250px;
+
+}
+
+     /* Style the navigation menu */
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  width: 50%;
+
+
+  
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+
+
+
+
+}

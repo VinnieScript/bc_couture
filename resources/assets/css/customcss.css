@@ -1,0 +1,19 @@
+
+ a:hover{
+            border-bottom-style:solid;
+            border-color:#fff;
+            
+            cursor:pointer;
+            font-weight:bold;
+
+
+            }
+        #serach{
+            background-image:url('images/logo.jpg');
+            background-position:right;
+        }
+    a:visited{
+          color:#fff;
+        }
+
+

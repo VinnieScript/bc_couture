@@ -32,7 +32,7 @@
               x =  $(this).find('img').attr('id').valueOf();
             alert(x);
               $.ajax({
-                  url:'/viewselected/',
+                  url:'/viewselected',
                   type:'post',
                   headers: { 'X-CSRF-TOKEN': $('input[name=_token]').val() },
                   data:{

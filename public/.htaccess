@@ -18,8 +18,5 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-    #Reuse Code
-    RewriteEngine On 
-    RewriteRule ^(.*)$ public/$1 [L]
-
+    
 </IfModule>

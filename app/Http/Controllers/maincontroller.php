@@ -96,8 +96,15 @@ class maincontroller extends Controller
         $member = new ourproducts();
         $id = $request->id;
         $result = $member::where('id','=',$id)->get();
-        Session::put('fetch',$result);
-        return response('Saved');
+        if($result){
+            Session::put('fetch',$result);
+            $response ='Saved'
+        }
+        else{
+            $response = "Unsaved";
+        }
+        
+        return response($response);
 
 
     }

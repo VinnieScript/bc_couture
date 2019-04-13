@@ -98,7 +98,7 @@ class maincontroller extends Controller
         $result = $member::where('id','=',$id)->get();
         if($result){
             Session::put('fetch',$result);
-            $response ='Saved'
+            $response ='Saved';
         }
         else{
             $response = "Unsaved";

@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="icon" href="{!!asset('images/logo.jpg')}!!"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
-        <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+        <link rel="icon" href="{!!asset('public/images/logo.jpg')}!!"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('public/css/styles.css')}}">
+        <script src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
         <title>BC_COUTURE | Home of Fashion</title>
         </head>
         <style>
@@ -132,10 +132,10 @@
            <div  class="workinghours">
            <table border="0" style="width:100%">
            <tr>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em" ><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/time.png')}}" width="20px"/></div><span style="font-size:1.1em">WORKING HOURS</span><br/> 8:00am - 8:00pm</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/delivery.png')}}" width="20px"/></div><span style="font-size:1.1em">FREE DELIVERY & RETURN</span><br/>On delivery over $1000</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/money.png')}}" width="20px"/></div><span style="font-size:1.1em">100% MONEY BACK</span><BR/>30days money back Garanted</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/telephone.png')}}" width="20px"/></div><span style="font-size:1.1em">PHONE NUMBER  01-223009</span><br/>Order Online Noow!</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em" ><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/time.png')}}" width="20px"/></div><span style="font-size:1.1em">WORKING HOURS</span><br/> 8:00am - 8:00pm</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/delivery.png')}}" width="20px"/></div><span style="font-size:1.1em">FREE DELIVERY & RETURN</span><br/>On delivery over $1000</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/money.png')}}" width="20px"/></div><span style="font-size:1.1em">100% MONEY BACK</span><BR/>30days money back Garanted</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/telephone.png')}}" width="20px"/></div><span style="font-size:1.1em">PHONE NUMBER  01-223009</span><br/>Order Online Noow!</td>
            </tr>
            </table>
            </div>
@@ -145,7 +145,7 @@
 <div  class="logoArea" align="center">
            
               <div class="logoArea1">
-                <img src="{{asset('images/bc_couture.png')}}" width="50px" height="40px"/><span style=" font-weight:bold;font-family:candara;font-size:2.0em;color:#500000;cursor: pointer;" id="home">BC COUTURE</span>
+                <img src="{{asset('public/images/bc_couture.png')}}" width="50px" height="40px"/><span style=" font-weight:bold;font-family:candara;font-size:2.0em;color:#500000;cursor: pointer;" id="home">BC COUTURE</span>
                 </div>
                 
                   <div class="logoArea2">

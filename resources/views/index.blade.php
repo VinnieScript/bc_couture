@@ -234,7 +234,7 @@
         
         @foreach ($all as $result)
         <div class="displayproduct"  >
-        <div ><img src="{{asset($result->productimage)}}" class="imageframe"  id="{{$result->id}}" /></div>
+        <div ><img src="{{asset(public/$result->productimage)}}" class="imageframe"  id="{{$result->id}}" /></div>
         <div><img src="{{asset('public/images/5-stars.png')}}"  class="starframe" /></div>
         <div style="width:100%;font-family:candara;font-weight:bold" align="center">{{$result->productname}}</div>
         <div style="width:100%;font-family:candara;font-weight:bold" align="center">{{$result->productprice}}</div>

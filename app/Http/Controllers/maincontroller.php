@@ -48,6 +48,7 @@ class maincontroller extends Controller
             $member->categories = $request->get('category');
             $member->created_at = $request->get('created');
             $member->productimage = $path; 
+            $member->stock = $request->stock;
             $member->save();
            
             $response="Saved";
@@ -122,12 +123,24 @@ class maincontroller extends Controller
         $id = $r->id;
         $productname = $r->productname;
         //$selected = [$subtotal,$quantity,$price,$id,$productimage];
-        Cart::add($id,$productname,$quantity,$price);
+        $member = new ourproducts();
+
+        $check= $member->where('productname','=',$r->productname)->first();
+        if($check->stock > $quantity){
+            Cart::add($id,$productname,$quantity,$price);
+            $response="Completed";
+        }
+        else{
+            $response = "We Only Have " . $check->stock.' of this Item left';
+        }
+
+
+        
         //$cart = Session::push('cart',array($selected));
         //$count = count(Session::get('cart'));
         //Session::put('cartitem',$count);
 
-        return response('Complted');
+        return response($response);
 
 
     }
@@ -194,15 +207,16 @@ class maincontroller extends Controller
                 'currency' => 'ngn'
             ));
         
+        //dd($customer);
         try{
             $fetch = $member::where('tracker','=',$identifer)->first();
-            Mail::send('email',['paymentId'=> $customer->id,'amount'=>$sum],function($message){
-              $message->to('hademylola@gmail.com','Our Valuable Customer')->subject('PAYMENT CONFIRMATION FROM BCCOUTURE');
+            Mail::send('email',['paymentId'=> $charge->id,'amount'=>$sum],function($message) use($customer){
+              $message->to($customer->email,'Our Valuable Customer')->subject('PAYMENT CONFIRMATION FROM BCCOUTURE');
               });
 
         }
         catch(Exception $ex){
-
+            dd(ex);
         }
         
         
@@ -210,7 +224,7 @@ class maincontroller extends Controller
         
         //$member->status= $r->status;
         if($update){
-            $update->paymentid = $customer->id;
+            $update->paymentid = $charge->id;
             $update->paymentstatus = "paid";
             $cartSelected= [];
         $cartItem = Cart::content();
@@ -232,7 +246,7 @@ class maincontroller extends Controller
         
                 $update->save();
             Cart::destroy();
-            return redirect()->route('success',['id' => $customer->id]);
+            return redirect()->route('success',['id' => $charge->id]);
         }
        
 
@@ -250,7 +264,11 @@ class maincontroller extends Controller
     public function saveCheckout(Request $r){
         $member = new checkout();
         $order = new order();
-        $member->addressline = $r->address;
+        $member1 = new usersignup();
+
+        $checkemail = $member1->where('emailaddress','=',$r->email)->first();
+        if($checkemail === null){
+            $member->addressline = $r->address;
         $member->emailaddress = $r->email;
         $member->city = $r->city;
         $member->state = $r->state;
@@ -261,8 +279,14 @@ class maincontroller extends Controller
         $member->tracker = $r->tracker;
         $member->approved= 'pending';
         $member->save();
+        $response = $r->tracker;
+        }
+        else{
+            $response = "EmailAddress Already In Use.";
+        }
         
-        return response($r->tracker);
+        
+        return response($response);
     }
 
     public function login(){

@@ -170,9 +170,16 @@ $.ajax({
     tracker:tracker
   },
   success:function(data){
-      if(data!=""){
+     
+
+      if(data ==="EmailAddress Already In Use."){
         
-        window.location= "/"+ data+"/paymentUrl.tc";
+       alert(data)
+       $('#saveCheckout').removeAttr('disabled');
+       document.getElementById('result').innerHTML="";
+      }
+      else{
+         window.location= "/"+ data+"/paymentUrl.tc";
       }
         
         

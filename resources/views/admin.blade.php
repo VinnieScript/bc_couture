@@ -36,18 +36,22 @@
             //alert('Jquery')
             $("#viewproduct").click(function(){
 
-                window.location= "viewproducts/";
+                window.location= "/";
                 document.getElementById('body').innerHTML="";
 
             })
+$('#home').click(function(){
 
+              window.location="/";
+            });
 
             $("#save").click(function(event){
                 event.preventDefault();
                 var image = $('#productimage').prop('files')[0];
                 var productname = document.getElementById('productname').value;
                 var productprice = document.getElementById('productprice').value;
-                var category = $("#select").val(); 
+                var category = $("#select").val();
+                var stock = document.getElementById('stock').value; 
                 var d = new Date();
                 var strDate = d.getFullYear() + "/" + (d.getMonth()+1) + "/" + d.getDate();
                 var formData = new FormData();
@@ -57,7 +61,8 @@
                 formData.append('productname', productname);
                 formData.append('productprice', productprice);
                 formData.append('category', category);
-                formData.append('created',strDate)
+                formData.append('created',strDate);
+                formData.append('stock',stock);
                 var nimage = $('#productimage')[0].files[0]
                 
                  // Note this line
@@ -99,7 +104,7 @@
         
         <div id="maindiv" style="width:100%; height:100%;border:0px solid #000">
         <div style="width:80%;height:40px; background-color:#500000;position:absolute;z-index:2;margin-top:150px;margin-left:100px;border-radius:5px">
-        <table width="100%" border="0" style="line-height:30px;font-family:candara;font-weight:bold;color:#fff" align="center" ><tr><td align="center">BC COUTURE</td><td align="center">Categories</td><td align="center">Featured Custom</td><td align="center">Our Brand</td><td align="center">Custom Menu</td><td align="center">Sale Product</td><td align="center">Template Product</td><td align="center">Contact Us</td><td align="center">About Us</td></tr></table>
+        <table width="100%" border="0" style="line-height:30px;font-family:candara;font-weight:bold;color:#fff" align="center" ><tr><td align="center"><span id="home" style="cursor: pointer;">BC COUTURE</span></td><td align="center">Categories</td><td align="center">Featured Custom</td><td align="center">Our Brand</td><td align="center">Custom Menu</td><td align="center">Sale Product</td><td align="center">Template Product</td><td align="center">Contact Us</td><td align="center">About Us</td></tr></table>
         <div style="width:100%; margin-top:20px;color:#fff;background-color:#000;">
         
         </div>
@@ -157,9 +162,7 @@
         <div style="width:100%; height:30px;font-family:candara;border-bottom:1px solid #500000;margin-top:5px;cursor:pointer" id="viewproduct">View All</div>
         <div style="width:100%; height:30px;font-family:candara;border-bottom:1px solid #500000;margin-top:5px"><a href='/admin/approvedelivery/' style="text-decoration: none">Approve Delivery</a></div>
         <div style="width:100%; height:30px;font-family:candara;border-bottom:1px solid #500000;margin-top:5px">Monitor Delivery Process</div>
-        <div style="width:100%; height:30px;font-family:candara;border-bottom:1px solid #500000;margin-top:5px"></div>
-        <div style="width:100%; height:30px;font-family:candara;border-bottom:1px solid #500000;margin-top:5px"></div>
-        <div style="width:100%; height:30px;font-family:candara;border-bottom:1px solid #500000;margin-top:5px"></div>
+        
         
         
         </div>
@@ -173,8 +176,9 @@
         {{csrf_field()}}
    
     <input type="text" id="productname" placeholder="Enter Product Name" style="width:300px;height:30px;font-family candara"/><br/>
-    <input type="text" id="productprice" placeholder="Enter Product Name" style="width:300px;height:30px;font-family candara"/><br/>
-    <select id="select" style="width:100px;height:30px;font-family:candara"><option>Women</option><option>Ladies</option></select><br/>
+    <input type="text" id="productprice" placeholder="Enter Product Price" style="width:300px;height:30px;font-family candara"/><br/>
+    <input type="text" id="stock" placeholder="Enter Stock " style="width:300px;height:30px;font-family candara"/><br/>
+    <select id="select" style="width:100px;height:30px;font-family:candara"><option>Women</option><option>Men</option></select><br/>
     <input type="file" id="productimage" name="productimage"/><br/>
     <input type="submit"  id="save"  value="Save" style="width:200px;height:30px;"/>
    <div id="response" style="font-family:candara;font-size:1.2em;font-weight:bold"></div>

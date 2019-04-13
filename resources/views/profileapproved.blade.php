@@ -165,7 +165,7 @@ a:visited{
         <div style="width: 100%;" >
           <input type="text" id="userid" value="{{$userid}}">
           <H1>Approved Request Tracker</H1>
-          @if($approvedRequest)
+          @if(count($approvedRequest) > 0)
 
       @foreach ($approvedRequest as $r)
       

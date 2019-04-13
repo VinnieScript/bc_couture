@@ -34,6 +34,12 @@
         <script>
         $(document).ready(function(){
             //alert('Jquery')
+
+            $('#home').click(function(){
+
+              window.location="/";
+            });
+
             $("#viewproduct").click(function(){
 
                 window.location= "viewproducts/";
@@ -138,7 +144,7 @@ var x = window.confirm('Approve?')
         {{csrf_field()}}
         <div id="maindiv" style="width:100%; height:100%;border:0px solid #000">
         <div style="width:80%;height:40px; background-color:#500000;position:absolute;z-index:2;margin-top:150px;margin-left:100px;border-radius:5px">
-        <table width="100%" border="0" style="line-height:30px;font-family:candara;font-weight:bold;color:#fff" align="center" ><tr><td align="center">BC COUTURE</td><td align="center">Categories</td><td align="center">Featured Custom</td><td align="center">Our Brand</td><td align="center">Custom Menu</td><td align="center">Sale Product</td><td align="center">Template Product</td><td align="center">Contact Us</td><td align="center">About Us</td></tr></table>
+        <table width="100%" border="0" style="line-height:30px;font-family:candara;font-weight:bold;color:#fff" align="center" ><tr><td align="center"><span style="cursor: pointer;" id="home">BC COUTURE</span></td><td align="center">Categories</td><td align="center">Featured Custom</td><td align="center">Our Brand</td><td align="center">Custom Menu</td><td align="center">Sale Product</td><td align="center">Template Product</td><td align="center">Contact Us</td><td align="center">About Us</td></tr></table>
         <div style="width:100%; margin-top:20px;color:#fff;background-color:#000;">
         
         </div>
@@ -208,7 +214,7 @@ var x = window.confirm('Approve?')
         
          <div style="width:100%;height:30px;font-family:candara;background-color:#fff;color:#000;text-align:left">
           <h1>Awaiting Approvals</h1>
-       @if($allpendingapprovals)
+       @if(count($allpendingapprovals) > 0)
 
       @foreach ($allpendingapprovals as $r)
       
@@ -220,7 +226,7 @@ var x = window.confirm('Approve?')
     <br/>
       @endforeach
       @else
-      <div style="width:50%"><h2>NO PENDING TRANSACTION</h2></div>
+      <div style="width:100%"><h2>NO PENDING TRANSACTION TO AUTHORISE.</h2></div>
       @endif
 
       

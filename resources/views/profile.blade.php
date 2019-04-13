@@ -164,7 +164,7 @@ a:visited{
         <div style="width: 100%;" >
           <input type="hidden" id="userid" value="{{$userid}}">
           <H1>Awaiting Request Tracker</H1>
-          @if($pendingRequest)
+          @if(count($pendingRequest) > 0)
 
       @foreach ($pendingRequest as $r)
       
@@ -179,7 +179,7 @@ a:visited{
     <br/>
       @endforeach
       @else
-      <div style="width:50%"><h2>NO PENDING TRANSACTION</h2></div>
+      <div style="width:50%"><span style="font-size: '18px';font-family: 'candara'">NO PENDING TRANSACTION</span></div>
       @endif
 
           

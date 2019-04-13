@@ -35,6 +35,13 @@
                 //document.getElementById('body').innerHTML="";
 
             })
+            $("#home").click(function(){
+
+                window.location= "/";
+                //document.getElementById('body').innerHTML="";
+
+            })
+
 
             $("#quantity").on('change',function(){
 
@@ -69,9 +76,15 @@
                                 productname:productname
                             },
                             success:function(data){
-                                //alert(data);
+                               // alert(data);
                                 //console.log(data)
-                                    window.location="/";
+                                if(data == "Completed"){
+                                    window.location="/"
+                                }
+                                else{
+                                    alert(data);
+                                }
+                                
                             },
                             error:function(object, status,e){
                                 alert(e);
@@ -132,7 +145,7 @@
 <div  class="logoArea" align="center">
            
               <div class="logoArea1">
-                <img src="{{asset('images/bc_couture.png')}}" width="50px" height="40px"/><span style=" font-weight:bold;font-family:candara;font-size:2.0em;color:#500000">BC COUTURE</span>
+                <img src="{{asset('images/bc_couture.png')}}" width="50px" height="40px"/><span style=" font-weight:bold;font-family:candara;font-size:2.0em;color:#500000;cursor: pointer;" id="home">BC COUTURE</span>
                 </div>
                 
                   <div class="logoArea2">
@@ -147,7 +160,7 @@
            
         </div>
          <div  class="menubar">
-        <table width="100%" border="0" style="font-family:candara;font-weight:bold;color:#fff" align="center" ><tr><td align="center">BC COUTURE</td><td align="center">Categories</td><td align="center">Featured Custom</td><td align="center">Our Brand</td><td align="center">Custom Menu</td><td align="center">Sale Product</td><td align="center">Template Product</td><td align="center">Contact Us</td><td align="center">About Us</td></tr></table>
+        <table width="100%" border="0" style="font-family:candara;font-weight:bold;color:#fff" align="center" ><tr><td align="center"><span id="home" style="cursor: pointer">BC COUTURE</span></td><td align="center">Categories</td><td align="center">Featured Custom</td><td align="center">Our Brand</td><td align="center">Custom Menu</td><td align="center">Sale Product</td><td align="center">Template Product</td><td align="center">Contact Us</td><td align="center">About Us</td></tr></table>
         
         
         

@@ -4,9 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="icon" href="{!!asset('images/logo.jpg')}!!"/>
-        <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{asset('public/css/styles.css')}}">
+        <link rel="icon" href="{!!asset('public/images/logo.jpg')}!!"/>
+        <script src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
         <title>BC_COUTURE | Home of Fashion</title>
         </head>
         <style>
@@ -113,14 +115,14 @@
         </script>
         <body>
         <div id="fancyLoaderappend"></div>
- <div id="fancyLoader"></div>
+ <div id="fancyLoaderCart"></div>
         <div style="width:100%;height:1000px;position:absolute;z-index:1;position;background-color:#000;opacity:0.5" align="center">
         </div>
         <div style="width:100%;height:1000px;position:absolute;z-index:2;position" align="center"><div style="width:50%;color:#fff;margin-top:10%">
         <span style="font-family: candara;font-weight: bold;font-size: 1.5em">BC_COUTURE SHOPPING CART</span><br/>
         <span> 8 Louis Solomon Street , Ahmadu Bello Way, Victoria Island, Lagos</span>
         <span></span>
-        <div style="width:100%;background-color:#fff">
+        <div style="width:100%;background-color:#fff" class="fancyLoaderCartView">
         <div style="width:100%;height:30px;font-family:candara;background-color:#009acd;text-align:left">
         <div style="float:left;width:200px;height:40px; margin-left:10px">Product Name</div><div style="float:left;width:100px;height:40px">Price</div><div style="float:left;width:100px;height:40px">Quantity</div><div style="float:left;height:40px;width:100px">Total</div><div style="float:left;height:40px; margin-right:10px">Decision</div>
       </div>
@@ -136,7 +138,7 @@
       
       </div>
       <br/>
-<div ><span style="color:#000;font-weight:bold;font-family:Arial">Total:</span><img src="{{asset('images/naira.png')}}" width="20px" /><span style="color:#000;font-family:candara;font-size:1.3em;font-weight:bold">{{$total}}</span></div>
+<div ><span style="color:#000;font-weight:bold;font-family:Arial">Total:</span><img src="{{asset('public/images/naira.png')}}" width="20px" /><span style="color:#000;font-family:candara;font-size:1.3em;font-weight:bold">{{$total}}</span></div>
         
         </div>
         <div style="margin-top:30px"><button style="margin-left:10px;font-family:candara;cursor:pointer;background-color:#500000;color:#fff; width:150px; height:30px" id="contd">Countinue Shopping</button><button style="margin-left:10px; width:150px; height:30px; background-color:#009acd;color:#fff;font-family:candara;cursor:pointer"><a href="/checkout">Check out</a></button></div>

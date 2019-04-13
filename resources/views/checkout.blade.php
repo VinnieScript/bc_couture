@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="{!!asset('images/logo.jpg')}!!"/>
+        <link rel="icon" href="{!!asset('public/images/logo.jpg')}!!"/>
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
-        <script src="{{asset('newjs/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{asset('public/newjs/jquery-3.3.1.min.js')}}"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   
@@ -65,10 +65,10 @@
            <div style="float:left;margin-left:100px;width:80%">
            <table border="0" style="width:100%">
            <tr>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em" ><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/time.png')}}" width="20px"/></div><span style="font-size:1.1em">WORKING HOURS</span><br/> 8:00am - 8:00pm</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/delivery.png')}}" width="20px"/></div><span style="font-size:1.1em">FREE DELIVERY & RETURN</span><br/>On delivery over $1000</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/money.png')}}" width="20px"/></div><span style="font-size:1.1em">100% MONEY BACK</span><BR/>30days money back Garanted</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/telephone.png')}}" width="20px"/></div><span style="font-size:1.1em">PHONE NUMBER  01-223009</span><br/>Order Online Noow!</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em" ><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/time.png')}}" width="20px"/></div><span style="font-size:1.1em">WORKING HOURS</span><br/> 8:00am - 8:00pm</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/delivery.png')}}" width="20px"/></div><span style="font-size:1.1em">FREE DELIVERY & RETURN</span><br/>On delivery over $1000</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/money.png')}}" width="20px"/></div><span style="font-size:1.1em">100% MONEY BACK</span><BR/>30days money back Garanted</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/telephone.png')}}" width="20px"/></div><span style="font-size:1.1em">PHONE NUMBER  01-223009</span><br/>Order Online Noow!</td>
            </tr>
            </table>
            
@@ -78,10 +78,10 @@
            </div>
            <div style="margin-top:100px;border:0px solid #000; width:100%" id="logoArea">
            <div style="margin-left:100px;float:left;width:80%;border:0px solid #000">
-           <div style="width:50px;height:40px;border:1px solid #500000;float:left"><img src="{{asset('images/bc_couture.png')}}" width="50px" height="40px"/></div>
+           <div style="width:50px;height:40px;border:1px solid #500000;float:left"><img src="{{asset('public/images/bc_couture.png')}}" width="50px" height="40px"/></div>
            <div style="float:left; margin-left:10px;line-height:40px;font-weight:bold;font-family:candara;font-size:2.0em;color:#500000"><a href="/">BC COUTURE</a></div>
            <div style="margin-left:2%;margin-top:5px;float:left"><input type="text" placeholder="Enter your search" style="font-family:candara;border-radius:5px;width:500px; height:30px;margin-left:3%" id="search"/></div>
-           <div style="margin-left:5%;margin-top:5px;float:left"><img src="{{asset('images/cart.png')}}" width="40px"/></div><div style="font-family:candara;float:left;margin-top:2px;margin-left:5px">Shopping Cart<br/><span style="font-weight:bold;font-size:1.5em; cursor:pointer" id="viewcart">{{$counter}} </span><span>items</span></div>
+           <div style="margin-left:5%;margin-top:5px;float:left"><img src="{{asset('public/images/cart.png')}}" width="40px"/></div><div style="font-family:candara;float:left;margin-top:2px;margin-left:5px">Shopping Cart<br/><span style="font-weight:bold;font-size:1.5em; cursor:pointer" id="viewcart">{{$counter}} </span><span>items</span></div>
            </div>
           
            

@@ -40,7 +40,7 @@
 
                   },
                   success:function(data){
-                        alert("Response"+data);
+                        //alert("Response"+data);
                         location="viewselect/"
                   },
                   error:function(object, status, e){

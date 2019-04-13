@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="{!!asset('images/logo.jpg')}!!"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">
+        <link rel="icon" href="{!!asset('public/images/logo.jpg')}!!"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('public/css/styles.css')}}">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{asset('public/js/jquery-3.3.1.min.js')}}"></script>
         <title>BC_COUTURE | Home of Fashion</title>
         </head>
         
@@ -65,7 +65,7 @@
           <div  style="float: left;" id="menu_icon">
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                  <i class="fa fa-bars">
-                   <img src="{{asset('images/menu.png')}}" width="40px" height="30px" style="background-color: #fff" />
+                   <img src="{{asset('public/images/menu.png')}}" width="40px" height="30px" style="background-color: #fff" />
 
                  </i>
                 
@@ -110,10 +110,10 @@
            <div  class="workinghours">
            <table border="0" style="width:100%">
            <tr>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em" ><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/time.png')}}" width="20px"/></div><span style="font-size:1.1em">WORKING HOURS</span><br/> 8:00am - 8:00pm</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/delivery.png')}}" width="20px"/></div><span style="font-size:1.1em">FREE DELIVERY & RETURN</span><br/>On delivery over $1000</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/money.png')}}" width="20px"/></div><span style="font-size:1.1em">100% MONEY BACK</span><BR/>30days money back Garanted</td>
-           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('images/telephone.png')}}" width="20px"/></div><span style="font-size:1.1em">PHONE NUMBER  01-223009</span><br/>Order Online Noow!</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em" ><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/time.png')}}" width="20px"/></div><span style="font-size:1.1em">WORKING HOURS</span><br/> 8:00am - 8:00pm</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/delivery.png')}}" width="20px"/></div><span style="font-size:1.1em">FREE DELIVERY & RETURN</span><br/>On delivery over $1000</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/money.png')}}" width="20px"/></div><span style="font-size:1.1em">100% MONEY BACK</span><BR/>30days money back Garanted</td>
+           <td style="margin-left:20px; font-family:candara;font-weight:bold; font-size:0.8em"><div style="float:left; margin-right:10px;margin-top:8px"><img src="{{asset('public/images/telephone.png')}}" width="20px"/></div><span style="font-size:1.1em">PHONE NUMBER  01-223009</span><br/>Order Online Noow!</td>
            </tr>
            </table>
            </div>
@@ -125,7 +125,7 @@
            <div  class="logoArea" align="center">
            
               <div class="logoArea1">
-                <img src="{{asset('images/bc_couture.png')}}" width="50px" height="40px"/><span style=" font-weight:bold;font-family:candara;font-size:2.0em;color:#500000">BC COUTURE</span>
+                <img src="{{asset('public/images/bc_couture.png')}}" width="50px" height="40px"/><span style=" font-weight:bold;font-family:candara;font-size:2.0em;color:#500000">BC COUTURE</span>
                 </div>
                 
                   <div class="logoArea2">
@@ -135,7 +135,7 @@
                
                   <div class="logoArea3">
                   
-                  <span style="font-family:candara;"><img src="{{asset('images/cart.png')}}" width="20px"/>Cart<br/><span style="font-weight:bold;font-size:1em; cursor:pointer" id="viewcart"> @if($counter){{$counter}}items @else <div>(EmptyCart)</div> @endif</span></span>
+                  <span style="font-family:candara;"><img src="{{asset('public/images/cart.png')}}" width="20px"/>Cart<br/><span style="font-weight:bold;font-size:1em; cursor:pointer" id="viewcart"> @if($counter){{$counter}}items @else <div>(EmptyCart)</div> @endif</span></span>
                 </div>
                 
              
@@ -174,20 +174,20 @@
         <div style="width:100%; background-color:#500000;color:#fff;font-weight:bold;font-family:candara;border-top-left-radius:7px;border-top-right-radius:7px;height:20px">BestSeller</div>
         <table>
         <tr>
-        <td><img src="{{asset('images/bestseller1.jpg')}}" width="100px"/></td>
-        <td><img src="{{asset('images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
+        <td><img src="{{asset('public/images/bestseller1.jpg')}}" width="100px"/></td>
+        <td><img src="{{asset('public/images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
         </tr>
         <tr>
-        <td><img src="{{asset('images/bestseller2.jpg')}}" width="100px"/></td>
-        <td><img src="{{asset('images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
+        <td><img src="{{asset('public/images/bestseller2.jpg')}}" width="100px"/></td>
+        <td><img src="{{asset('public/images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
         </tr>
         <tr>
-        <td><img src="{{asset('images/bestseller4.jpg')}}" width="100px"/></td>
-        <td><img src="{{asset('images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
+        <td><img src="{{asset('public/images/bestseller4.jpg')}}" width="100px"/></td>
+        <td><img src="{{asset('public/images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
         </tr>
         <tr>
-        <td><img src="{{asset('images/bestseller4.jpg')}}" width="100px"/></td>
-        <td><img src="{{asset('images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
+        <td><img src="{{asset('public/images/bestseller4.jpg')}}" width="100px"/></td>
+        <td><img src="{{asset('public/images/5-stars.png')}}" width="100px"/><br/><span style="font-family:candara">Ankara with Gel</span></td>
         </tr>
         <tr>
         <td></td>
@@ -198,7 +198,7 @@
         <div style="width:100%;margin-top:20px">
         <div style="width:100%; background-color:#500000;color:#fff;font-weight:bold;font-family:candara;border-top-left-radius:7px;border-top-right-radius:7px;height:20px">Latest Update</div>
         <div style="width:100%">
-        <img src="{{asset('images/news.jpg')}}" width="100%" height="100px"/>
+        <img src="{{asset('public/images/news.jpg')}}" width="100%" height="100px"/>
         <span style="color:#500000;font-weight:bold;font-family:candara;text-align:justify">Tommy Hilfiger</span><span style="text-align:justify;font-family:candara">Nigerian influencers,celebs wears fashion brand to exclusive in store event in Nigeria</span>
         
         </div>
@@ -227,15 +227,15 @@
 
 
 
-<div><img src="{{asset('images/banner.gif')}}" width="100%" height="200px"/></div>
+<div><img src="{{asset('public/images/banner.gif')}}" width="100%" height="200px"/></div>
 <div style="margin-top:10px;background-color: #003300;width: 100%" > 
         @if (!$all->isEmpty())
         <div style="float:left;width:100%;border:0px solid #000"   >
         
         @foreach ($all as $result)
         <div class="displayproduct"  >
-        <div ><img src="{{asset($result->productimage)}}" class="imageframe"  id="{{$result->id}}" /></div>
-        <div><img src="{{asset('images/5-stars.png')}}"  class="starframe" /></div>
+        <div ><img src="{{asset(public/$result->productimage)}}" class="imageframe"  id="{{$result->id}}" /></div>
+        <div><img src="{{asset('public/images/5-stars.png')}}"  class="starframe" /></div>
         <div style="width:100%;font-family:candara;font-weight:bold" align="center">{{$result->productname}}</div>
         <div style="width:100%;font-family:candara;font-weight:bold" align="center">{{$result->productprice}}</div>
         </div>

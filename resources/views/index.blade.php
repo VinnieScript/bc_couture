@@ -30,7 +30,7 @@
     })
             $(".displayproduct").click(function(){
               x =  $(this).find('img').attr('id').valueOf();
-            alert(x);
+            //alert(x);
               $.ajax({
                   url:'/viewselected',
                   type:'post',
